@@ -1,0 +1,672 @@
+
+<!-- saved from url=(0042)https://tramites.renaper.gob.ar/boleta.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>Debajo de procesar 20220519<br>3
+
+  
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+<title>RENAPER</title>
+
+<link href="./RENAPER_files/css" rel="stylesheet">
+<link href="./RENAPER_files/bootstrap.min.css" rel="stylesheet">
+<link href="./RENAPER_files/font-awesome.min.css" rel="stylesheet">
+<link href="./RENAPER_files/poncho.min.css" rel="stylesheet">
+<link href="./RENAPER_files/icono-arg.css" rel="stylesheet">
+<script async="" src="./RENAPER_files/analytics.js.descarga"></script><script src="./RENAPER_files/script__script src=" https:="" stackpath.bootstrapcdn.com="" bootstrap="" 3.4.1="" js="" bootstrap.min.js”=""></script>
+<link href="./RENAPER_files/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
+<link href="./RENAPER_files/colorbox.css" type="text/css" rel="STYLESHEET">
+<link type="text/css" rel="stylesheet" href="./RENAPER_files/css2" media="all">
+<link href="./RENAPER_files/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+@import url("css/style.css");
+</style>
+
+
+<!-- nativo del sitio viejo -->
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ 
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+
+  ga('create', 'UA-22075965-1', 'gov.ar');
+
+  ga('send', 'pageview');
+
+
+
+
+</script>		
+		
+
+		<script type="text/javascript">
+				<!--
+				function MM_preloadImages() { //v3.0
+				  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+					var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+					if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+				}
+
+				function MM_swapImgRestore() { //v3.0
+				  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+				}
+
+				function MM_findObj(n, d) { //v4.01
+				  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+					d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+				  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+				  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+				  if(!x && d.getElementById) x=d.getElementById(n); return x;
+				}
+
+				function MM_swapImage() { //v3.0
+				  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+				   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+				}
+				//-->
+		</script>
+		
+		<script type="text/javascript" src="./RENAPER_files/jquery-latest.js.descarga"></script>
+		<script type="text/javascript" src="./RENAPER_files/jquery.validate.js.descarga"></script>
+
+		<script type="text/javascript" src="./RENAPER_files/base.js.descarga"></script>
+		<script type="text/javascript" src="./RENAPER_files/utility.js.descarga"></script>
+		<script type="text/javascript" src="./RENAPER_files/sigslot_core.js.descarga"></script>
+		<script type="text/javascript" src="./RENAPER_files/common.js.descarga"></script>
+
+<!--	<script type='text/javascript' src='js/jquery-1.4.4.min.js'></script> -->
+		<script type="text/javascript" src="./RENAPER_files/jQuery.validity.js.descarga"></script>
+
+		
+		<script type="text/javascript">
+            function isMyDate(){
+				var dia = document.getElementById("txtfechanacdia").value;
+				
+				if(dia.length==1)
+				    dia='0'+dia;
+				
+				var mes = document.getElementById("txtfechanacmes").value;
+				
+				if(mes.length==1)
+				    mes='0'+mes;
+				
+				var anio = document.getElementById("txtfechanacanio").value;
+				var dt=dia+'/'+mes+'/'+anio;
+				//alert(dt);
+				
+				if (isDate(dt)==false){
+					return false
+				}
+				return true
+			}
+			
+			
+			$(document).ready(function()
+					{
+						$("#txtnocel").click(function(evento)
+						{
+							if ($("#txtnocel").attr("checked"))
+							{
+								$("#telfijo").css("display", "block");
+							}
+							else
+							{
+								document.getElementById('txtcodigotel').value="";
+								document.getElementById('txttelefono').value="";
+								$("#telfijo").css("display", "none");
+							}
+						});
+					});	
+					
+					$(document).ready(function()
+			{
+				$("#txtnodel").click(function(evento)
+				{
+					if ($("#txtnodel").attr("checked"))
+					{
+						document.getElementById('txtoficina').selectedIndex="1";
+						$("#divdel").css("display", "none");
+						$("#divotradel").css("display", "block");
+					}
+					else
+					{
+						document.getElementById('txtotradel').value="";
+						$("#divdel").css("display", "block");
+						document.getElementById('txtoficina').selectedIndex="0";
+						$("#divotradel").css("display", "none");
+					}
+				});
+			});	
+
+			$(function() { 
+					$("#frmbuscador").validity(function() {
+					
+					    document.getElementById('botonPaso1').value='1';
+						
+						$("#txtdni")
+							.require(" El campo DNI es obligatorio.")
+							.match("number")
+							.range(1,99000000, "Ingresó una Cantidad incorrecta de números")
+							.assert(esNacional(parseInt(document.getElementById("txtdni").value)), "Válido sólo para ciudadanos argentinos");
+						$("#txtnombres")
+							.require(" El campo Nombres es obligatorio.");
+						$("#txtsexo")
+							.require(" El campo Sexo es Obligatorio.");
+						$("#txtapellido")
+							.require(" El campo Apellido es Obligatorio.");
+						$("#txtidestadocivil")
+							.require()
+							.greaterThanOrEqualTo(1, "El campo Estado Civil es Obligatorio.");
+						$("#txtfechanacanio")
+							.assert(isMyDate, "La Fecha de Nacimiento es Incorrecta.")
+							.assert(MyDateDiff(), "La Fecha para este tramite ha expirado.");
+							$("#txtprovincia")
+							.require()
+							.greaterThanOrEqualTo(1, "La Provincia es Obligatoria.");
+						$("#txtoficina")
+							.require()
+							.greaterThanOrEqualTo(1, "La Delegacion es Obligatoria.");
+						$("#txtacta")
+							.require( " El Campo Acta es Obligatorio.");
+						$("#txttomo")
+							.require( " El Campo Tomo es Obligatorio.");
+						$("#txtfolio")
+							.require( " El Campo Folio es Obligatorio.");
+						$("#txtanio")
+							.require( " El Campo año es Obligatorio.")
+							.range(1900,2012, "ingresó un año incorrecto");
+						$("#txtotradel")
+							.assert(unaDelegacion() ,"Debe Ingresar una Delegacion.");
+					});
+			});
+			
+			function unaDelegacion()
+			{
+				result= false;
+
+				if(document.getElementById('txtnodel').checked)
+				{
+					ldel=document.getElementById('txtotradel').value.length;
+					if(ldel >  0)
+					{
+						result=true;
+					}
+					else
+					{
+						result=false;
+					}
+				}
+				else
+				{
+					result=true;
+				}
+				return result;
+			}
+		</script>
+		
+		<script type="text/javascript">
+// comienza script de telefono----------------------------------------------------------------
+	function unTelefono()
+	{
+		result= false;
+		ltelarea=document.getElementById('txtcodigotel').value.length;
+		ltelefono=document.getElementById('txttelefono').value.length;
+		lcelarea=document.getElementById('txtcodigocel').value.length;
+		lcelular=document.getElementById('txtcelular').value.length;
+
+		if(document.getElementById('txtnocel').checked)
+		{
+			ltelarea=document.getElementById('txtcodigotel').value.length;
+			ltelefono=document.getElementById('txttelefono').value.length;
+			lcelarea=document.getElementById('txtcodigocel').value.length;
+			lcelular=document.getElementById('txtcelular').value.length;
+			
+			if((ltelarea+ltelefono) > 0 || (lcelarea+lcelular) > 0)
+				result=true;
+		}
+		else
+		{
+			if((lcelarea+lcelular) > 0)
+				result=true;
+		}
+		return result;
+	}
+
+	function esTelefono(cel)
+	{
+		result= false;
+		var larea;
+		var lnumero;
+		var area;
+		var numero;
+		if(cel==0)
+		{
+			larea=document.getElementById('txtcodigotel').value.length;
+			lnumero=document.getElementById('txttelefono').value.length;
+			area=document.getElementById('txtcodigotel').value;
+			numero=document.getElementById('txttelefono').value;
+		}
+		else
+		{
+			larea=document.getElementById('txtcodigocel').value.length;
+			lnumero=document.getElementById('txtcelular').value.length;
+			area=document.getElementById('txtcodigocel').value;
+			numero=document.getElementById('txtcelular').value;
+		}
+	
+		if (lnumero + larea == 10)
+		{
+			result=esTelValido(area+numero,cel);
+		}
+		else if(lnumero + larea == 0)
+		{
+			result=true;
+		}
+		
+		return result;
+	}	
+
+	function esTelValido(tos,cel)
+	{
+		result=false;
+		if(cel==1)
+		{
+			result=esCelu(tos);
+		}	
+		else
+		{
+			result=esFijo(tos);
+		}
+		return result;
+	}
+	
+	
+	function esCelu(tos) 
+	{
+		var myResult = true;
+
+		var number1=parseInt(tos.substr(0,3));
+		var number2=parseInt(tos.substr(0,6));
+
+		var set3 = new Array(135,110,111,118,136,144,145,163,117,119,118,166,133,146,455,978,999);
+		var set6 = new Array(113716,113717,113839,113991,113987,340654,387156,387154,372215,341131,344618,235350,274766,236225,319765,341768,340167,346569,346870,340663,347267,340157,376841,235351,646450,337752,347668,394266);
+
+		if(jQuery.inArray(number1,set3)!=-1)
+		{
+			  myResult = false;
+		}
+
+		if(jQuery.inArray(number2,set6)!=-1)
+		{
+			  myResult = false;
+		}
+		return myResult;
+	}
+
+	function esFijo(tos) 
+	{
+		var myResult = false;
+
+		$.ajax(
+		{
+			async: false,
+			type : "GET",
+			url : "checkTelFijo.php",
+			data : 'tos=' + tos,
+			success : function(response) 
+			{
+				if(response == "1") 
+				{
+					// es fijo
+					myResult = true;
+				}
+			}
+		});
+		
+		return myResult;
+	}
+	
+					function toggleFijo(element) 
+					{
+
+						/*if(element.checked) 
+						{
+							$('#txtcodigocel').attr('disabled', true);
+							$('#txttelefono').attr('disabled', true);
+						}
+						else 
+						{
+							$('#txtcodigotel').removeAttr('disabled');
+							$('#txtcelular').removeAttr('disabled');
+						}*/
+						$('#nocel').slideToggle('slow');
+					};
+
+
+			
+
+
+				</script>
+
+		<script type="text/javascript">
+		
+		function esNacional(dni){
+
+              if (((dni>0)&&(dni<=14999999))||((dni>=16000000)&&(dni<91000000)))
+		             return true;
+					 
+			  return false;		 
+         }		
+		var DateDiff = 
+		{
+			inDays: function(d1, d2) 
+			{
+				var t2 = d2.getTime();
+				var t1 = d1.getTime();
+
+				return parseInt((t2-t1)/(24*3600*1000));
+			},
+
+			inWeeks: function(d1, d2) 
+			{
+				var t2 = d2.getTime();
+				var t1 = d1.getTime();
+
+				return parseInt((t2-t1)/(24*3600*1000*7));
+			},
+
+			inMonths: function(d1, d2) 
+			{
+				var d1Y = d1.getFullYear();
+				var d2Y = d2.getFullYear();
+				var d1M = d1.getMonth();
+				var d2M = d2.getMonth();
+
+				return (d2M+12*d2Y)-(d1M+12*d1Y);
+			},
+
+			inYears: function(d1, d2) 
+			{
+				return d2.getFullYear()-d1.getFullYear();
+			}
+		}
+		
+		function MyDateDiff(cuenta)
+		{
+			var dia = document.getElementById("txtfechanacdia").value;
+			var mes = document.getElementById("txtfechanacmes").value;
+			var anio = document.getElementById("txtfechanacanio").value;
+
+			var dt = new Date(anio,mes,dia);
+			var hoy = new Date();
+			
+			var diff = DateDiff.inYears(dt, hoy);
+			if (diff>cuenta)
+				result= false;
+			else
+				result= true;	
+			return result;	
+		}
+		
+		
+		</script>
+		
+		<script type="text/javascript" src="./RENAPER_files/validate.js.descarga"></script>
+		<script type="text/javascript" src="./RENAPER_files/jquery.jCombo.min.js.descarga"></script>
+		
+		
+		<script type="text/javascript">
+			function upperCase(x)
+			{
+			   var y=document.getElementById(x).value;
+			   document.getElementById(x).value=y.toUpperCase();
+			   document.getElementById(x).value=y.toUpperCase();
+
+			}
+		</script>
+<!-- en sitio viejo -->
+
+<script type="text/javascript">
+function closeCurrentWindow()
+{
+  window.close();
+}
+</script>
+
+
+
+
+
+<header class="header"> 
+	<nav class="navbar navbar-top navbar-default" role="navigation">
+		<div class="container">
+			<div>
+				<div class="navbar-header"> 
+					<a class="navbar-brand" href="https://tramites.renaper.gob.ar/" aria-label="Argentina.gob.ar Presidencia de la Nación"> 
+						<img src="./RENAPER_files/logo.svg" alt="Argentina.gob.ar" height="50"> 
+					</a> 
+					<a onclick="jQuery(&#39;.navbar.navbar-top&#39;).addClass(&#39;state-search&#39;);" class="btn btn-primary btn-login visible-xs" href="https://tramites.renaper.gob.ar/boleta.php#" aria-labelledby="edit-keys">
+						<span class="fa fa-search fa-fw"></span>
+					</a> 
+					<a class="btn btn-link btn-login visible-xs" href="https://mi.argentina.gob.ar/" aria-label="Ingresar a Mi Argentina">
+						<div class="icono-arg-mi-argentina fa-fw"></div>
+					</a>
+				</div>
+				<div class="nav navbar-nav navbar-right hidden-xs"> 
+					<a onclick="jQuery(&#39;.navbar.navbar-top&#39;).removeClass(&#39;state-search&#39;);" href="https://tramites.renaper.gob.ar/boleta.php#" class="btn btn-link visible-xs">
+						<div class="fa fa-times"></div> 
+					</a><div id="cd-login"> 
+					<a href="https://mi.argentina.gob.ar/" class="btn btn-link hidden-xs" aria-label="Ingresar a Mi Argentina">
+						<div class="text-primary pull-left" style="margin-right: 8px;"></div>Mi Argentina
+					</a>
+				</div>
+				
+				<!--<div class="pull-left"><form class="main-form" role="search" action="https://argentina.gob.ar/miargentina" method="post" id="apachesolr-search-custom-page-search-form" accept-charset="UTF-8">
+				<div><input type="hidden" name="form_build_id" value="form-lTpMegkCw669DEGCNUqxaEa3l2pR1NA3FXz9pxQgOEg"><input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form">
+					<div style="display:none;">
+						<div class="form-item form-item-tarro-de-miel form-type-textfield form-group"> 
+							<label class="control-label" for="edit-tarro-de-miel">Dejar en blanco </label>
+							<input class="form-control form-text" type="text" id="edit-tarro-de-miel" name="tarro_de_miel" value="" size="60" maxlength="128">
+						</div>
+					</div>
+					<div class="input-group"> 
+						<label class="sr-only" for="edit-keys">Buscar en el sitio</label>
+						<input placeholder="Buscar trámites, servicios o áreas" id="edit-keys" aria-label="Buscar trámites, servicios o áreas" class="form-control form-text" type="text" name="keys" value="" size="20" maxlength="255">
+						<span class="input-group-btn">
+							<button class="btn-primary fa fa-search btn btn-primary form-submit btn2" aria-labelledby="edit-keys" type="submit" id="edit-submit" name="op" value="<span class=&quot;sr-only&quot;>Buscar</span>">
+								<span class="sr-only">Buscar</span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div> -->
+	</div>
+</div>
+</div>
+ </nav>
+ </header><link href="./RENAPER_files/estilos2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" media="print" href="./RENAPER_files/estilos_imprimir_new.css">
+<link href="./RENAPER_files/estiloDF.css" rel="stylesheet" type="text/css">
+<link href="./RENAPER_files/botones.css" rel="stylesheet" type="text/css">
+<link href="./RENAPER_files/formularios.css" rel="stylesheet" type="text/css">
+
+
+<div id="contenido2">
+    <table width="750" border="0" align="center" id="tablaTituloBoleta">
+        <tbody><tr>
+            <td width="33" valign="top"><div id="NUMEROpASO"></div></td>
+            <td width="356" valign="top"><h1>Comprobante de trámite con Atención Rápida<br>
+                    <span class="texto_">Haga  click en el icono de la impresora para imprimir el comprobante de pago</span></h1></td>
+            <td width="27">&nbsp;</td>
+        </tr>
+    </tbody></table>
+    <table id="Tablaboleta2" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tbody><tr>
+            <td><img src="./RENAPER_files/encabezado-boleta.png"></td> 
+        </tr>
+        <tr>
+            <td id="tdTitulos">TIPO DE TRÁMITE</td>
+        </tr>
+        <tr>
+            <td id="tdDescTipoTramite"><div>DNI</div></td>
+        </tr>
+        <tr>
+            <td id="tdTitulos">NÚMERO DE BOLETA</td>
+        </tr>
+        <tr>
+            <td id="tdBoleta"><div>67341000000999900016800009999437891800101000300003</div></td>
+        </tr>
+        <tr>
+                        <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tbody><tr>
+                        <td rowspan="2" id="tdCodigoBarra"><img src="./RENAPER_files/barcode.php"></td>
+                        <td id="tdTitulos" style="padding-left:0px">IMPORTE A PAGAR</td>
+                    </tr>
+                    <tr>
+                        <td id="tdImporte"><div>$ 300  </div></td>
+                    </tr>
+
+                </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td id="botones">
+                <!--<a href="boletaPDF.php?codigo=67340100999943789180300004&dni=95159341" target="blank"><img border="0" style="cursor:pointer" src="img/pdf.png"></img></a>-->
+                <span style="margin-right:40px;">&nbsp;</span>
+                <img style="cursor:pointer" src="./RENAPER_files/print.png" onclick="window.print()">
+            </td>
+        </tr>
+        <tr>
+            <td id="tdDniTitular">Número de DNI del titular del trámite: 95159341  </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr class="cod_oper">
+            <td>Código de trámite con Atención Rápida: 66ues8 </td>
+        </tr><tr>
+                    </tr><tr>
+            <td style="padding-left:5px;padding-right:10px;"><hr width="100%" size="1" style="color:#666666"></td> 
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tbody><tr><td>
+				<div class="alert alert-info">
+				<p class="fel"><strong>¡Felicitaciones! Ya iniciaste tu trámite con Atención Rápida.</strong></p>
+					<ul class="boleta">
+					<li>Conservá el código alfanumérico de 6 dígitos. Te lo vamos a solicitar en la etapa presencial.</li>
+					<li>Descargá esta boleta para presentarla en el Centro de documentación, en donde podrás abonarla únicamente con tarjeta de débito o crédito. Si querés abonarla en efectivo, podés hacerlo con anticipación en los <a href="https://tramites.renaper.gob.ar/descargas/FORMAS-DE-PAGO-TAR.pdf" target="_blank">puntos de cobro adheridos</a>.</li>
+					<li>Ahora sólo te falta confirmar tu turno para finalizar la etapa online</li>
+					<li><button onclick="window.close();" class="btn btn-success">Confirmar turno en Mi Argentina</button></li>
+					</ul>
+					<p class="fel"><strong>Importante: Recordá que vamos a solicitarte dos códigos (el de inicio de trámite y el de confirmación de turno) para la etapa presencial.</strong></p>
+					</div>
+				</td>
+				</tr>
+				
+				
+                    
+					<tr>
+					<td>
+					
+					
+					</td>
+					</tr>
+					
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+
+    <div id="segundaBoleta">
+        <div align="center">
+            <img src="./RENAPER_files/linea_corte.jpg" width="800px">
+        </div> 
+        <table id="Tablaboleta2" cellpadding="0" cellspacing="0" border="0" align="center">
+            <tbody><tr>
+                <td><img src="./RENAPER_files/encabezado-boleta.png"></td> 
+            </tr>
+            <tr>
+                <td id="tdTitulos">TIPO DE TRÁMITE</td>
+            </tr>
+            <tr>
+                <td id="tdDescTipoTramite"><div>DNI</div></td>
+            </tr>
+            <tr>
+                <td id="tdTitulos">NÚMERO DE BOLETA</td>
+            </tr>
+            <tr>
+                <td id="tdBoleta"><div>67341000000999900016800009999437891800101000300003</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tbody><tr>
+                            <td rowspan="2" id="tdCodigoBarra"><img src="./RENAPER_files/barcode(1).php"></td>
+                            <td id="tdTitulos" style="padding-left:0px">IMPORTE A PAGAR</td>
+                        </tr>
+                        <tr>
+                            <td id="tdImporte"><div>$ 300</div></td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td id="tdDniTitular">Número de DNI del titular del trámite: 95159341</td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr><tr>
+            </tr><tr class="cod_oper">
+                <td>Código de Precarga: 66ues8 </td>
+            </tr><tr>
+            </tr><tr>
+                <td style="padding-left:5px;padding-right:10px;"><hr width="100%" size="1" style="color:#666666"></td> 
+            </tr>
+            <tr>
+                <td>
+                    <div class="alert alert-info">
+				<p class="fel"><strong>¡Felicitaciones! Ya iniciaste tu trámite con Atención Rápida.</strong></p>
+					<ul class="boleta">
+					<li>Conservá el código alfanumérico de 6 dígitos. Te lo vamos a solicitar en la etapa presencial.</li>
+					<li>Descargá esta boleta para presentarla en el Centro de documentación, en donde podrás abonarla únicamente con tarjeta de débito o crédito. Si querés abonarla en efectivo, podés hacerlo con anticipación en los <a href="https://tramites.renaper.gob.ar/descargas/FORMAS-DE-PAGO-TAR.pdf" target="_blank">puntos de cobro adheridos</a>.</li>
+					<li>Ahora sólo te falta confirmar tu turno para finalizar la etapa online</li>
+					
+					</ul>
+					<p class="fel"><strong>Importante: Recordá que vamos a solicitarte dos códigos (el de inicio de trámite y el de confirmación de turno) para la etapa presencial.</strong></p>
+					</div><table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tbody><tr>
+
+                           
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+    </div> 
+</div>
+<footer class="container-fluid main-footer p-x-2" id="footer">
+    <div class="row footer center-block">
+        <div class="col-sm-6 m-y-1">
+          <img class="image-responsive" height="30" alt="Argentina Unida" src="./RENAPER_files/logo_argentina_unida.svg">
+        </div>
+        <!--<div class="col-sm-6 text-right m-t-1 m-b-2">
+          <a href="https://www.argentina.gob.ar/miargentina/preguntasfrecuentes" target="_blank"><span class="sr-only">Abrir vínculo en nueva pestaña</span>Preguntas frecuentes</a>
+          <a href="https://www.argentina.gob.ar/mi/terminos-y-condiciones" target="_blank"><span class="sr-only">Abrir vínculo en nueva pestaña</span>Términos y condiciones</a>
+        </div>-->
+    </div>
+  </footer>
+</body></html>

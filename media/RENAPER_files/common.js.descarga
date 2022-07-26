@@ -1,0 +1,25 @@
+jQuery(document).ready(function($){	
+
+	// show hide search container
+	$("#showSearchConatiner").bind("click", function() {
+		$("#searchConatiner").slideToggle("slow");
+	});
+	
+	
+});
+
+
+
+// used for paging class
+function changePaging(argStr, argPageNum)
+{
+  var QueryStr = argStr+''+argPageNum;
+  location.href = QueryStr;
+}
+
+
+function doPageRedirect(argUrl)
+{
+        window.location=argUrl;
+}
+
